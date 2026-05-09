@@ -20,6 +20,12 @@
       "language": "smart",
       "scopeName": "source.smart",
       "path": "./syntaxes/smart.tmLanguage.json"
-    }]
+    }],
+    "snippets": [
+      {
+        "language": "smart",
+        "path": "./snippets/smart.json"
+      }
+    ]
   }
 }
