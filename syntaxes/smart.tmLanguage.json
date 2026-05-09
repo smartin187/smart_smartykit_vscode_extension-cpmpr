@@ -6,6 +6,9 @@
 			"include": "#keywords"
 		},
 		{
+			"include": "#builtins"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -17,6 +20,12 @@
 			"patterns": [{
 				"name": "keyword.control.smart",
 				"match": "\\b(void)\\b"
+			}]
+		},
+		"builtins": {
+			"patterns": [{
+				"name": "support.function.builtin.smart",
+				"match": "\\b(print|goto|quit)\\b"
 			}]
 		},
 		"strings": {
