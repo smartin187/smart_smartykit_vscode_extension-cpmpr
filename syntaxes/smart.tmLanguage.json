@@ -1,52 +1,77 @@
 {
-	"name": "Smart",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#builtins"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#comments"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.smart",
-				"match": "\\b(void)\\b"
-			}]
-		},
-		"builtins": {
-			"patterns": [{
-				"name": "support.function.builtin.smart",
-				"match": "\\b(print|goto|quit)\\b"
-			}]
-		},
-		"strings": {
-			"patterns": [
-				{
-					"name": "string.quoted.double.smart",
-					"begin": "\"",
-					"end": "\"",
-					"patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
-				},
-				{
-					"name": "string.quoted.single.smart",
-					"begin": "'",
-					"end": "'",
-					"patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
-				}
-			]
-		},
-		"comments": {
-			"name": "comment.line.double-slash.smart",
-			"match": "//.*$"
-		}
-	},
-	"scopeName": "source.smart"
+    "name": "Smart",
+    "patterns": [
+        {
+            "include": "#functionDeclaration"
+        },
+        {
+            "include": "#functionCall"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#builtins"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "functionDeclaration": {
+            "patterns": [{
+                "name": "meta.function.smart",
+                "match": "\\b(void)\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\{",
+                "captures": {
+                    "1": {"name": "keyword.control.smart"},
+                    "2": {"name": "entity.name.function.smart"}
+                }
+            }]
+        },
+        "functionCall": {
+            "patterns": [{
+                "name": "meta.function-call.smart",
+                "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\:",
+                "captures": {
+                    "1": {"name": "entity.name.function.smart"}
+                }
+            }]
+        },
+        "keywords": {
+            "patterns": [{
+                "name": "keyword.control.smart",
+                "match": "\\b(void)\\b"
+            }]
+        },
+        "builtins": {
+            "patterns": [{
+                "name": "support.function.builtin.smart",
+                "match": "\\b(print|goto|quit)\\b"
+            }]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.smart",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
+                },
+                {
+                    "name": "string.quoted.single.smart",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line.double-slash.smart",
+            "match": "//.*$"
+        }
+    },
+    "scopeName": "source.smart"
 }
