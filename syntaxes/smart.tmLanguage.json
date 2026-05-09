@@ -2,6 +2,12 @@
     "name": "Smart",
     "patterns": [
         {
+            "include": "#classDeclaration"
+        },
+        {
+            "include": "#classReference"
+        },
+        {
             "include": "#functionDeclaration"
         },
         {
@@ -21,6 +27,15 @@
         }
     ],
     "repository": {
+        "classReference": {
+            "patterns": [{
+                "name": "meta.class-reference.smart",
+                "match": "\\b(A|X|Y)\\b(?!\\s*\\{)",
+                "captures": {
+                    "1": {"name": "entity.name.class.smart"}
+                }
+            }]
+        },
         "functionDeclaration": {
             "patterns": [{
                 "name": "meta.function.smart",

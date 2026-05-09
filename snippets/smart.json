@@ -18,5 +18,21 @@
   "prefix": "quit",
   "body": "quit: ",
   "description": "Exit the program"
+  },
+  "A": {
+  "prefix": "A",
+  "body": "A",
+  "description": "Register accumulator A"
+  },
+  "X": {
+  "prefix": "X",
+  "body": "X",
+  "description": "Register X"
+  },
+  "Y": {
+  "prefix": "Y",
+  "body": "Y",
+  "description": "Register Y"
   }
+  
 }
