@@ -7,6 +7,9 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
@@ -26,6 +29,10 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"comments": {
+			"name": "comment.line.double-slash.smart",
+			"match": "//.*$"
 		}
 	},
 	"scopeName": "source.smart"
