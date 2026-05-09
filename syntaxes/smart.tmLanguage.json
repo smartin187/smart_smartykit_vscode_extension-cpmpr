@@ -20,13 +20,18 @@
 			}]
 		},
 		"strings": {
-			"name": "string.quoted.double.smart",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.smart",
-					"match": "\\\\."
+					"name": "string.quoted.double.smart",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
+				},
+				{
+					"name": "string.quoted.single.smart",
+					"begin": "'",
+					"end": "'",
+					"patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
 				}
 			]
 		},
