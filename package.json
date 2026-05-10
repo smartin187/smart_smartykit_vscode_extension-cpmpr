@@ -3,6 +3,7 @@
     "displayName": "Smart",
     "description": "Adds syntax highlighting for the Smart language",
     "version": "0.0.1",
+    "main": "./out/extension.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/votreusername/smart-cpmpr"
@@ -13,6 +14,16 @@
     "categories": [
         "Programming Languages"
     ],
+    "scripts": {
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "vscode:prepublish": "npm run compile"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/vscode": "^1.118.0",
+        "typescript": "^5.0.0"
+    },
     "contributes": {
         "languages": [{
             "id": "smart",
@@ -30,6 +41,44 @@
                 "language": "smart",
                 "path": "./snippets/smart.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "smart.run",
+                "title": "Exécuter le programme Smart",
+                "icon": "$(run)"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "smart.run",
+                "key": "ctrl+f5",
+                "when": "editorLangId == smart"
+            }
+        ],
+        "menus": {
+            "editor/title": [
+                {
+                    "command": "smart.run",
+                    "group": "navigation",
+                    "when": "resourceLangId == smart"
+                }
+            ]
+        },
+        "configuration": {
+            "title": "Smart",
+            "properties": {
+                "smart.pythonCommand": {
+                    "type": "string",
+                    "default": "python",
+                    "description": "Commande Python à utiliser (ex: python, python3, py -3)."
+                },
+                "smart.toolchainPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Chemin vers le dossier smartykit_compiler (celui qui contient smart_emulator.py). Laisser vide pour auto-détection dans le workspace."
+                }
+            }
+        }
     }
 }
