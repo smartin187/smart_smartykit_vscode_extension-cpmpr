@@ -8,17 +8,17 @@ export function activate(context: vscode.ExtensionContext) {
     const disposable = vscode.commands.registerCommand('smart.run', async () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor) {
-            vscode.window.showErrorMessage('Ouvrez un fichier Smart.');
+            vscode.window.showErrorMessage('Open a Smart file.');
             return;
         }
 
         if (editor.document.languageId !== 'smart') {
-            vscode.window.showErrorMessage('La commande Smart ne fonctionne que sur des fichiers .sma.');
+            vscode.window.showErrorMessage('The Smart command only works on .sma files.');
             return;
         }
 
         if (editor.document.isUntitled) {
-            vscode.window.showErrorMessage('Enregistrez le fichier avant de l’exécuter.');
+            vscode.window.showErrorMessage('Save the file before executing it.');
             return;
         }
 
@@ -37,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
         const emulatorPath = await resolveToolchainScript(toolchainPath, 'smart_emulator.py');
         if (!emulatorPath) {
             vscode.window.showErrorMessage(
-                'Impossible de trouver smart_emulator.py. Configurez smart.toolchainPath (dossier smartykit_compiler) ou ouvrez le dossier smartykit_compiler dans votre workspace.'
+                'Unable to find smart_emulator.py. Configure smart.toolchainPath (smartykit_compiler folder) or open the smartykit_compiler folder in your workspace.'
             );
             return;
         }
