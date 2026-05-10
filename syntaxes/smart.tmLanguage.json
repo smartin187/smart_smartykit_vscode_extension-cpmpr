@@ -2,6 +2,12 @@
     "name": "Smart",
     "patterns": [
         {
+            "include": "#anchorDefinition"
+        },
+        {
+            "include": "#anchorReference"
+        },
+        {
             "include": "#classDeclaration"
         },
         {
@@ -30,6 +36,26 @@
         }
     ],
     "repository": {
+        "anchorDefinition": {
+            "patterns": [{
+                "name": "meta.anchor.smart",
+                "match": "^\\s*(#)([a-zA-Z_][a-zA-Z0-9_]*)\\s*;",
+                "captures": {
+                    "1": {"name": "punctuation.definition.anchor.smart"},
+                    "2": {"name": "entity.name.label.smart"}
+                }
+            }]
+        },
+        "anchorReference": {
+            "patterns": [{
+                "name": "meta.anchor-reference.smart",
+                "match": "(goto)\\s*:\\s*([a-zA-Z_][a-zA-Z0-9_]*)",
+                "captures": {
+                    "1": {"name": "keyword.control.smart"},
+                    "2": {"name": "variable.other.label.smart"}
+                }
+            }]
+        },
         "classReference": {
             "patterns": [{
                 "name": "meta.class-reference.smart",
