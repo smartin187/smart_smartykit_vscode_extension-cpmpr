@@ -1,38 +1,37 @@
 {
-  "print": {
-    "prefix": "print",
-    "body": "print: ",
-    "description": "Display a char or str to the monitor"
-  },
-  "void function": {
-    "prefix": "void",
-    "body": "void ",
-    "description": "Make new function"
-  },
-  "goto": {
-  "prefix": "goto",
-  "body": "goto: ",
-  "description": "Go to a label"
-  },
-  "quit": {
-  "prefix": "quit",
-  "body": "quit: ",
-  "description": "Exit the program"
-  },
-  "A": {
-  "prefix": "A",
-  "body": "A",
-  "description": "Register accumulator A"
-  },
-  "X": {
-  "prefix": "X",
-  "body": "X",
-  "description": "Register X"
-  },
-  "Y": {
-  "prefix": "Y",
-  "body": "Y",
-  "description": "Register Y"
-  }
-  
+    "print": {
+        "prefix": "print",
+        "body": "print: ",
+        "description": "Display a char or str to the monitor"
+    },
+    "void function": {
+        "prefix": "void",
+        "body": "void ",
+        "description": "Make new function"
+    },
+    "goto": {
+        "prefix": "goto",
+        "body": "goto: ",
+        "description": "Go to a label"
+    },
+    "quit": {
+        "prefix": "quit",
+        "body": "quit: ",
+        "description": "Exit the program"
+    },
+    "A": {
+        "prefix": "A",
+        "body": "A",
+        "description": "Register accumulator A"
+    },
+    "X": {
+        "prefix": "X",
+        "body": "X",
+        "description": "Register X"
+    },
+    "Y": {
+        "prefix": "Y",
+        "body": "Y",
+        "description": "Register Y"
+    }
 }
