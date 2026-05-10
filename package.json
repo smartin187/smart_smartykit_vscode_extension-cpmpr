@@ -1,35 +1,35 @@
 {
-  "name": "smart-cpmpr",
-  "displayName": "Smart",
-  "description": "Adds syntax highlighting for the Smart language",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/votreusername/smart-cpmpr"
+    "name": "smart-cpmpr",
+    "displayName": "Smart",
+    "description": "Adds syntax highlighting for the Smart language",
+    "version": "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/votreusername/smart-cpmpr"
     },
-  "engines": {
-    "vscode": "^1.118.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "contributes": {
-    "languages": [{
-      "id": "smart",
-      "aliases": ["Smart", "smart"],
-      "extensions": [".sma"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "smart",
-      "scopeName": "source.smart",
-      "path": "./syntaxes/smart.tmLanguage.json"
-    }],
-    "snippets": [
-      {
-        "language": "smart",
-        "path": "./snippets/smart.json"
-      }
-    ]
-  }
+    "engines": {
+        "vscode": "^1.118.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "smart",
+            "aliases": ["Smart", "smart"],
+            "extensions": [".sma"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "smart",
+            "scopeName": "source.smart",
+            "path": "./syntaxes/smart.tmLanguage.json"
+        }],
+        "snippets": [
+            {
+                "language": "smart",
+                "path": "./snippets/smart.json"
+            }
+        ]
+    }
 }
