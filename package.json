@@ -68,15 +68,15 @@
         "configuration": {
             "title": "Smart",
             "properties": {
-                "smart.pythonCommand": {
+                "smart.emulatorPath": {
                     "type": "string",
-                    "default": "python",
-                    "description": "Commande Python à utiliser (ex: python, python3, py -3)."
+                    "default": "",
+                    "description": "Chemin complet vers smart_emulator.exe. Laisser vide pour utiliser %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe puis auto-détection dans le workspace."
                 },
                 "smart.toolchainPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Chemin vers le dossier smartykit_compiler (celui qui contient smart_emulator.py). Laisser vide pour auto-détection dans le workspace."
+                    "description": "Chemin vers un dossier contenant smart_emulator.exe. Laisser vide pour auto-détection dans le workspace."
                 }
             }
         }
