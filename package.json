@@ -3,6 +3,10 @@
   "displayName": "Smart",
   "description": "Adds syntax highlighting for the Smart language",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votreusername/smart-cpmpr"
+    },
   "engines": {
     "vscode": "^1.118.0"
   },
