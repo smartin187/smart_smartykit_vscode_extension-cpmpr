@@ -45,7 +45,7 @@
         "commands": [
             {
                 "command": "smart.run",
-                "title": "Exécuter le programme Smart",
+                "title": "Run the Smart program",
                 "icon": "$(run)"
             }
         ],
@@ -71,12 +71,12 @@
                 "smart.emulatorPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Chemin complet vers smart_emulator.exe. Laisser vide pour utiliser %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe puis auto-détection dans le workspace."
+                    "description": "Full path to smart_emulator.exe. Leave empty to use %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe then auto-detection in the workspace."
                 },
                 "smart.toolchainPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Chemin vers un dossier contenant smart_emulator.exe. Laisser vide pour auto-détection dans le workspace."
+                    "description": "Path to a folder containing smart_emulator.exe. Leave empty for auto-detection in the workspace."
                 }
             }
         }

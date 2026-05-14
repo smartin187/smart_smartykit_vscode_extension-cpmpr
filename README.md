@@ -1,6 +1,6 @@
 # smart-cpmpr README
 
-This extention add the coloration for SmartyKit Smart programming.
+This extension adds syntax highlighting for SmartyKit Smart programming.
 
 
 ## Features
