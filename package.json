@@ -47,6 +47,11 @@
                 "command": "smart.run",
                 "title": "Run the Smart program",
                 "icon": "$(run)"
+            },
+            {
+                "command": "smart.build",
+                "title": "Build the Smart program",
+                "icon": "$(tools)"
             }
         ],
         "keybindings": [
@@ -62,6 +67,11 @@
                     "command": "smart.run",
                     "group": "navigation",
                     "when": "resourceLangId == smart"
+                },
+                {
+                    "command": "smart.build",
+                    "group": "navigation",
+                    "when": "resourceLangId == smart"
                 }
             ]
         },
@@ -73,10 +83,15 @@
                     "default": "",
                     "description": "Full path to smart_emulator.exe. Leave empty to use %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe then auto-detection in the workspace."
                 },
+                "smart.compilerPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Full path to smart_build.exe. Leave empty to use %LOCALAPPDATA%\\Smart-SmartyKit\\smart_build.exe then auto-detection in the workspace."
+                },
                 "smart.toolchainPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Path to a folder containing smart_emulator.exe. Leave empty for auto-detection in the workspace."
+                    "description": "Path to a folder containing smart_emulator.exe and/or smart_build.exe. Leave empty for auto-detection in the workspace."
                 }
             }
         }

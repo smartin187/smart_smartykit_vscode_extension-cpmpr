@@ -7,12 +7,32 @@ This extension adds syntax highlighting for SmartyKit Smart programming.
 
 Add a coloration for comment, char, str, function (void), label, and variable.
 
+Also provides 2 commands to work with Smart-SmartyKit:
+
+- Run the current `.sma` file with `smart_emulator.exe`
+- Build (compile) the current `.sma` file with `smart_build.exe`
+
 ![feature-colors](images/feature-colors.png)
 
 
 ## Requirements
 
-For run Smart SmartyKit, you need to install [here](https://github.com/smartin187/smartykit_compiler).
+To run/build Smart programs, install Smart-SmartyKit from:
+
+- https://github.com/smartin187/smartykit_compiler
+
+By default, the extension looks for executables in:
+
+- `%LOCALAPPDATA%\Smart-SmartyKit\smart_emulator.exe`
+- `%LOCALAPPDATA%\Smart-SmartyKit\smart_build.exe`
+
+You can override paths using the settings below.
+
+## Configuration
+
+- `smart.emulatorPath`: full path to `smart_emulator.exe` (optional)
+- `smart.compilerPath`: full path to `smart_build.exe` (optional)
+- `smart.toolchainPath`: folder containing `smart_emulator.exe` and/or `smart_build.exe` (optional)
 
 
 
