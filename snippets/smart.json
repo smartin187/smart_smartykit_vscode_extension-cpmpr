@@ -14,6 +14,11 @@
         "body": "void ",
         "description": "Make new function"
     },
+    "return function": {
+        "prefix": "return",
+        "body": "return ",
+        "description": "Return a value.\nCan't be used outside function."
+    },
     "goto": {
         "prefix": "goto",
         "body": "goto: ",

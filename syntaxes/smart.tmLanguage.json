@@ -109,7 +109,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void)\\b"
+                "match": "\\b(void|return)\\b"
             }]
         },
         "builtins": {
