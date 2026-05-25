@@ -48,5 +48,15 @@
         "prefix": "Y",
         "body": "Y",
         "description": "Register Y"
+    },
+    "True": {
+        "prefix": "True",
+        "body": "True",
+        "description": "Boolean value: True"
+    },
+    "False": {
+        "prefix": "False",
+        "body": "False",
+        "description": "Boolean value: False"
     }
 }
