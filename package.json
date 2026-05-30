@@ -20,22 +20,31 @@
         "vscode:prepublish": "npm run compile"
     },
     "devDependencies": {
-        "@types/node": "^20.0.0",
+        "@types/node": "^20.19.41",
         "@types/vscode": "^1.118.0",
         "typescript": "^5.0.0"
     },
     "contributes": {
-        "languages": [{
-            "id": "smart",
-            "aliases": ["Smart", "smart"],
-            "extensions": [".sma"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "smart",
-            "scopeName": "source.smart",
-            "path": "./syntaxes/smart.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "smart",
+                "aliases": [
+                    "Smart",
+                    "smart"
+                ],
+                "extensions": [
+                    ".sma"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "smart",
+                "scopeName": "source.smart",
+                "path": "./syntaxes/smart.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "smart",
