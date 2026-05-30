@@ -11,6 +11,9 @@
     "engines": {
         "vscode": "^1.118.0"
     },
+    "activationEvents": [
+        "onLanguage:smart"
+    ],
     "categories": [
         "Programming Languages"
     ],
