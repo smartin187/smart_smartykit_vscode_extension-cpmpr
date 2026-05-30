@@ -90,17 +90,17 @@
                 "smart.emulatorPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Full path to smart_emulator.exe. Leave empty to use %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe then auto-detection in the workspace."
+                    "description": "Full path to smart_emulator (Linux: /usr/bin/smart_emulator or Windows: smart_emulator.exe). Leave empty to use default paths (/usr/bin/smart_emulator on Linux, %LOCALAPPDATA%\\Smart-SmartyKit\\smart_emulator.exe on Windows) then auto-detection in the workspace."
                 },
                 "smart.compilerPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Full path to smart_build.exe. Leave empty to use %LOCALAPPDATA%\\Smart-SmartyKit\\smart_build.exe then auto-detection in the workspace."
+                    "description": "Full path to smart_build (Linux: /usr/bin/smart_build or Windows: smart_build.exe). Leave empty to use default paths (/usr/bin/smart_build on Linux, %LOCALAPPDATA%\\Smart-SmartyKit\\smart_build.exe on Windows) then auto-detection in the workspace."
                 },
                 "smart.toolchainPath": {
                     "type": "string",
                     "default": "",
-                    "description": "Path to a folder containing smart_emulator.exe and/or smart_build.exe. Leave empty for auto-detection in the workspace."
+                    "description": "Path to a folder containing smart_emulator and/or smart_build (on Linux) or smart_emulator.exe and/or smart_build.exe (on Windows). Leave empty for auto-detection in the workspace."
                 }
             }
         }

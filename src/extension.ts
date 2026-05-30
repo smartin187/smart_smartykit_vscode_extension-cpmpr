@@ -22,9 +22,13 @@ export function activate(context: vscode.ExtensionContext) {
             (await resolveToolchainScript(toolchainPath, 'smart_emulator.exe'));
 
         if (!emulatorPath) {
-            vscode.window.showErrorMessage(
-                'Unable to find smart_emulator.exe. Configure smart.emulatorPath (full path) or smart.toolchainPath (folder containing smart_emulator.exe), or ensure Smart-SmartyKit is installed.'
-            );
+            let errorMessage: string;
+            if (process.platform === 'linux') {
+                errorMessage = 'Unable to find smart_emulator. Configure smart.emulatorPath (full path) or smart.toolchainPath (folder containing smart_emulator), or ensure Smart-SmartyKit is installed.';
+            } else {
+                errorMessage = 'Unable to find smart_emulator.exe. Configure smart.emulatorPath (full path) or smart.toolchainPath (folder containing smart_emulator.exe), or ensure Smart-SmartyKit is installed.';
+            }
+            vscode.window.showErrorMessage(errorMessage);
             return;
         }
 
@@ -52,9 +56,13 @@ export function activate(context: vscode.ExtensionContext) {
             (await resolveToolchainScript(toolchainPath, 'smart_build.exe'));
 
         if (!compilerPath) {
-            vscode.window.showErrorMessage(
-                'Unable to find smart_build.exe. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_build.exe), or ensure Smart-SmartyKit is installed.'
-            );
+            let errorMessage: string;
+            if (process.platform === 'linux') {
+                errorMessage = 'Unable to find smart_build. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_build), or ensure Smart-SmartyKit is installed.';
+            } else {
+                errorMessage = 'Unable to find smart_build.exe. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_build.exe), or ensure Smart-SmartyKit is installed.';
+            }
+            vscode.window.showErrorMessage(errorMessage);
             return;
         }
 
