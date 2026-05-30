@@ -101,34 +101,50 @@ function buildProcessCommand(executablePath: string, programPath: string): strin
     if (process.platform === 'win32') {
         return `cmd /c ""${executablePath}" "${programPath}""`;
     }
-
-    return `"${executablePath}" "${programPath}"`;
+    else if (process.platform === 'linux') {
+        return `${executablePath} ${programPath}`;
+    }
+    return "";
 }
 
 function getDefaultEmulatorPath(): string | undefined {
-    if (process.platform !== 'win32') {
+    if (process.platform === 'linux') {
+        return '/usr/bin/smart_emulator';
+    } 
+
+    else if (process.platform === 'win32') {
+        const localAppData = process.env.LOCALAPPDATA;
+        if (!localAppData) {
+            return undefined;
+        }
+
+        return path.join(localAppData, 'Smart-SmartyKit', 'smart_emulator.exe');
+    }
+    else {
         return undefined;
     }
-
-    const localAppData = process.env.LOCALAPPDATA;
-    if (!localAppData) {
-        return undefined;
-    }
-
-    return path.join(localAppData, 'Smart-SmartyKit', 'smart_emulator.exe');
 }
 
 function getDefaultCompilerPath(): string | undefined {
-    if (process.platform !== 'win32') {
+    
+    if (process.platform === 'linux') {
+        return '/usr/bin/smart_build'
+    }
+
+    else if (process.platform === 'win32') {
+        const localAppData = process.env.LOCALAPPDATA;
+        if (!localAppData) {
+            return undefined;
+        }
+
+        return path.join(localAppData, 'Smart-SmartyKit', 'smart_build.exe');
+    }
+
+    else {
         return undefined;
     }
 
-    const localAppData = process.env.LOCALAPPDATA;
-    if (!localAppData) {
-        return undefined;
-    }
 
-    return path.join(localAppData, 'Smart-SmartyKit', 'smart_build.exe');
 }
 
 function stripOuterQuotes(value: string): string {
