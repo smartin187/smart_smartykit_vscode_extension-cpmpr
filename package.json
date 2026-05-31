@@ -2,7 +2,7 @@
     "name": "smart-cpmpr",
     "displayName": "Smart",
     "description": "Adds syntax highlighting for the Smart language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "main": "./out/extension.js",
     "repository": {
         "type": "git",
@@ -20,7 +20,8 @@
     "scripts": {
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
-        "vscode:prepublish": "npm run compile"
+        "vscode:prepublish": "npm run compile",
+        "package": "vsce package --no-rewrite-relative-links"
     },
     "devDependencies": {
         "@types/node": "^20.19.41",
