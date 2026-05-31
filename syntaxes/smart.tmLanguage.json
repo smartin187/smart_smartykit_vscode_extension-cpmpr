@@ -8,6 +8,9 @@
             "include": "#anchorReference"
         },
         {
+            "include": "#ifStatement"
+        },
+        {
             "include": "#classDeclaration"
         },
         {
@@ -60,6 +63,26 @@
                     "1": {"name": "support.function.builtin.smart"},
                     "2": {"name": "variable.other.label.smart"}
                 }
+            }]
+        },
+        "ifStatement": {
+            "patterns": [{
+                "name": "meta.if-statement.smart",
+                "begin": "\\b(if)\\b",
+                "beginCaptures": {
+                    "1": {"name": "keyword.control.smart"},
+                    "2": {"name": "variable.other.smart"}
+                },
+                "endCaptures": {
+                    "0": {"name": "punctuation.definition.block.smart"}
+                },
+                "patterns": [
+                    {"include": "#numbers"},
+                    {"include": "#strings"},
+                    {"include": "#comments"},
+                    {"include": "#variables"},
+                    {"include": "#booleans"}
+                ]
             }]
         },
         "classReference": {

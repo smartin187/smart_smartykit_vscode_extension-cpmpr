@@ -58,5 +58,10 @@
         "prefix": "False",
         "body": "False",
         "description": "Boolean value: False"
+    },
+    "if": {
+        "prefix": "if",
+        "body": "if ${1}{;\n    ${2}\n}",
+        "description": "Condition if"
     }
 }
