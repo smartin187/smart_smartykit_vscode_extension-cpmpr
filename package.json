@@ -27,6 +27,13 @@
         "@types/vscode": "^1.118.0",
         "typescript": "^5.0.0"
     },
+    "files": [
+        "out",
+        "images",
+        "snippets",
+        "syntaxes",
+        "language-configuration.json"
+    ],
     "contributes": {
         "languages": [
             {
