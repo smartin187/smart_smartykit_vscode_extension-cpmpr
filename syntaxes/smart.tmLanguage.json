@@ -72,19 +72,22 @@
             "patterns": [{
                 "name": "meta.if-statement.smart",
                 "begin": "\\b(if)\\b",
+                "end": "\\{",
                 "beginCaptures": {
-                    "1": {"name": "keyword.control.smart"},
-                    "2": {"name": "variable.other.smart"}
+                    "1": {"name": "keyword.control.smart"}
                 },
                 "endCaptures": {
                     "0": {"name": "punctuation.definition.block.smart"}
                 },
                 "patterns": [
+                    {"include": "#functionCall"},
                     {"include": "#numbers"},
                     {"include": "#strings"},
                     {"include": "#comments"},
                     {"include": "#variables"},
-                    {"include": "#booleans"}
+                    {"include": "#booleans"},
+                    {"include": "#keywords"},
+                    {"include": "#builtins"}
                 ]
             }]
         },
