@@ -63,5 +63,15 @@
         "prefix": "if",
         "body": "if ${1}{;\n    ${2}\n}",
         "description": "Condition if"
+    },
+    "import": {
+        "prefix": "import",
+        "body": "import \"${1}\"",
+        "description": "Import a module. Shearch in all path if not keyword 'from'."
+    },
+    "from": {
+        "prefix": "from ",
+        "body": "from \"${1}\";",
+        "description": "Shearch a module on spesific directory. Muste be: 'smart' (builtin module), 'lib' (global librairiy), 'file' (from any file, relative of absolute path)."
     }
 }
