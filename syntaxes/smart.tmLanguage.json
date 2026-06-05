@@ -116,7 +116,7 @@
         "functionDeclaration": {
             "patterns": [{
                 "name": "meta.function.smart",
-                "match": "\\b(void)\\s+([a-z_][a-zA-Z0-9_]*)\\s*\\{",
+                "match": "\\b(void)\\s+([\\p{L}_][\\p{L}0-9_]*)\\s*\\{",
                 "captures": {
                     "1": {"name": "keyword.control.smart"},
                     "2": {"name": "entity.name.function.smart"}
@@ -126,12 +126,13 @@
         "functionCall": {
             "patterns": [{
                 "name": "meta.function-call.smart",
-                "match": "\\b([a-z_][a-zA-Z0-9_]*)\\s*\\:",
+                "match": "\\b([\\p{L}_][\\p{L}0-9_]*)\\s*\\:",
                 "captures": {
                     "1": {"name": "entity.name.function.smart"}
                 }
             }]
-        },        "numbers": {
+        },
+        "numbers": {
             "patterns": [
                 {
                     "name": "constant.numeric.hex.smart",
@@ -152,7 +153,7 @@
         "variables": {
             "patterns": [{
                 "name": "meta.variable.smart",
-                "match": "\\.([a-zA-Z_][a-zA-Z0-9_]*)",
+                "match": "\\.([\\p{L}_][\\p{L}0-9_]*)",
                 "captures": {
                     "1": {"name": "variable.other.smart"}
                 }
