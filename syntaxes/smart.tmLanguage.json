@@ -11,6 +11,9 @@
             "include": "#ifStatement"
         },
         {
+            "include": "#whileStatement"
+        },
+        {
             "include": "#classDeclaration"
         },
         {
@@ -73,6 +76,28 @@
                 "name": "meta.if-statement.smart",
                 "begin": "\\b(if)\\b",
                 "end": "\\{",
+                "beginCaptures": {
+                    "1": {"name": "keyword.control.smart"}
+                },
+                "endCaptures": {
+                    "0": {"name": "punctuation.definition.block.smart"}
+                },
+                "patterns": [
+                    {"include": "#functionCall"},
+                    {"include": "#numbers"},
+                    {"include": "#strings"},
+                    {"include": "#comments"},
+                    {"include": "#variables"},
+                    {"include": "#booleans"},
+                    {"include": "#keywords"},
+                    {"include": "#builtins"}
+                ]
+            }]
+        },
+        "whileStatement": {
+            "patterns": [{
+                "name": "meta.while-statement.smart",
+                "begin": "\\b(while)\\b",
                 "beginCaptures": {
                     "1": {"name": "keyword.control.smart"}
                 },
@@ -162,7 +187,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void|return|import|from|if)\\b"
+                "match": "\\b(void|return|import|from|if|while)\\b"
             }]
         },
         "builtins": {

@@ -73,5 +73,10 @@
         "prefix": "from ",
         "body": "from \"${1}\";",
         "description": "Shearch a module on spesific directory. Muste be: 'smart' (builtin module), 'lib' (global librairiy), 'file' (from any file, relative of absolute path)."
+    },
+    "while": {
+        "prefix": "while",
+        "body": "while ${1}{;\n    ${2}\n}",
+        "description": "while loop. If condition is false, the loop is exited."
     }
 }
