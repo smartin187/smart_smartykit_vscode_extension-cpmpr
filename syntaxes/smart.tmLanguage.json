@@ -201,13 +201,19 @@
                 {
                     "name": "string.quoted.double.smart",
                     "begin": "\"",
-                    "end": "\"",
+                    "end": "(\"|\\n)",
+                    "endCaptures": {
+                        "1": {"name": "meta.string-close.smart"}
+                    },
                     "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
                 },
                 {
                     "name": "string.quoted.single.smart",
                     "begin": "'",
-                    "end": "'",
+                    "end": "('|\\n)",
+                    "endCaptures": {
+                        "1": {"name": "meta.string-close.smart"}
+                    },
                     "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
                 }
             ]
