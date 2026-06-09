@@ -187,7 +187,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void|return|import|from|if|else|elif|while)\\b"
+                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue)\\b"
             }]
         },
         "builtins": {

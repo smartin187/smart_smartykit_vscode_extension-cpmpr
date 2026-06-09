@@ -88,5 +88,15 @@
         "prefix": "while",
         "body": "while ${1}{;\n    ${2}\n}",
         "description": "while loop. If condition is false, the loop is exited."
+    },
+    "break": {
+        "prefix": "break",
+        "body": "break;",
+        "description": "Go out of loop. Can't be used outside loop."
+    },
+    "continue": {
+        "prefix": "continue",
+        "body": "continue;",
+        "description": "Restart loop. Can't be used outside loop."
     }
 }
