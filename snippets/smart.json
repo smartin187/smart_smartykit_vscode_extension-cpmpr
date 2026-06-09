@@ -64,6 +64,16 @@
         "body": "if ${1}{;\n    ${2}\n}",
         "description": "Condition if"
     },
+    "elif": {
+        "prefix": "elif",
+        "body": "elif ${1}{;\n    ${2}\n}",
+        "description": "Condition elif (used if the fisrt condition is False)."
+    },
+    "else": {
+        "prefix": "else",
+        "body": "else {;\n    ${1}\n}",
+        "description": "Condition else (used if all condition are False)."
+    },
     "import": {
         "prefix": "import",
         "body": "import \"${1}\"",
