@@ -2,7 +2,7 @@
     "name": "smart-cpmpr",
     "displayName": "Smart",
     "description": "Adds syntax highlighting for the Smart language",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "main": "./out/extension.js",
     "repository": {
         "type": "git",

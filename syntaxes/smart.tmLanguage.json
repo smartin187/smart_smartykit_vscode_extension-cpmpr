@@ -176,13 +176,22 @@
             }]
         },
         "variables": {
-            "patterns": [{
-                "name": "meta.variable.smart",
-                "match": "\\.([\\p{L}_][\\p{L}0-9_]*)",
-                "captures": {
-                    "1": {"name": "variable.other.smart"}
+            "patterns": [
+                {
+                    "name": "meta.variable.smart",
+                    "match": "\\.([\\p{L}_][\\p{L}0-9_]*)",
+                    "captures": {
+                        "1": {"name": "variable.other.smart"}
+                    }
+                },
+                {
+                    "name": "meta.variable.advanced.smart",
+                    "match": "~([\\p{L}_][\\p{L}0-9_]*)",
+                    "captures": {
+                        "1": {"name": "variable.other.advanced.smart"}
+                    }
                 }
-            }]
+            ]
         },
         "keywords": {
             "patterns": [{
