@@ -208,6 +208,37 @@
         "strings": {
             "patterns": [
                 {
+                    "name": "string.quoted.double.f.smart",
+                    "begin": "(F)(\")",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "1": {"name": "storage.modifier.smart"},
+                        "2": {"name": "punctuation.definition.string.begin.smart"}
+                    },
+                    "endCaptures": {
+                        "0": {"name": "punctuation.definition.string.end.smart"}
+                    },
+                    "patterns": [
+                        {"name": "constant.character.escape.smart", "match": "\\\\."},
+                        {
+                            "name": "meta.embedded.expression.smart",
+                            "begin": "\\{",
+                            "end": "\\}",
+                            "beginCaptures": {
+                                "0": {"name": "punctuation.definition.interpolation.begin.smart"}
+                            },
+                            "endCaptures": {
+                                "0": {"name": "punctuation.definition.interpolation.end.smart"}
+                            },
+                            "patterns": [
+                                {"include": "#variables"},
+                                {"include": "#functionCall"},
+                                {"include": "#numbers"}
+                            ]
+                        }
+                    ]
+                },
+                {
                     "name": "string.quoted.double.smart",
                     "begin": "\"",
                     "end": "(\"|\\n)",
