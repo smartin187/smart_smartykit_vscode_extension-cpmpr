@@ -248,13 +248,12 @@
                     "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
                 },
                 {
+                    "name": "invalid.illegal.string-length.smart",
+                    "match": "''|'([^'\\\\]|\\\\.){2,}'|'[^']*$"
+                },
+                {
                     "name": "string.quoted.single.smart",
-                    "begin": "'",
-                    "end": "('|\\n)",
-                    "endCaptures": {
-                        "1": {"name": "meta.string-close.smart"}
-                    },
-                    "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
+                    "match": "'([^'\\\\]|\\\\.)'"
                 }
             ]
         },
