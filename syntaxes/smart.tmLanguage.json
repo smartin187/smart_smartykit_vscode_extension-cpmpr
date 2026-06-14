@@ -208,6 +208,10 @@
         "strings": {
             "patterns": [
                 {
+                    "name": "invalid.illegal.string.smart",
+                    "match": "(''|'([^'\\\\]|\\\\.){2,}'|'([^'\\\\]|\\\\.)*[a-z]([^'\\\\]|\\\\.)*'|'([^'\\\\]|\\\\.)*$|\"([^\"\\\\]|\\\\.){22,}\"|\"([^\"\\\\]|\\\\.)*[a-z]([^\"\\\\]|\\\\.)*\"|\"([^\"\\\\]|\\\\.)*$)"
+                },
+                {
                     "name": "string.quoted.double.f.smart",
                     "begin": "(F)(\")",
                     "end": "\"",
@@ -248,12 +252,8 @@
                     "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
                 },
                 {
-                    "name": "invalid.illegal.string-length.smart",
-                    "match": "''|'([^'\\\\]|\\\\.){2,}'|'[^']*$"
-                },
-                {
                     "name": "string.quoted.single.smart",
-                    "match": "'([^'\\\\]|\\\\.)'"
+                    "match": "'([^'a-z\\\\]|\\\\.)+'"
                 }
             ]
         },
