@@ -99,6 +99,11 @@
         "body": "continue;",
         "description": "Restart loop. Can't be used outside loop."
     },
+    "error": {
+        "prefix": "error",
+        "body": "error ${1};",
+        "description": "Set a runtime error. Print `E` and the value next error keyword (the code error)."
+    },
     "f-string": {
         "prefix": "F",
         "body": "F\"${1}\"",
