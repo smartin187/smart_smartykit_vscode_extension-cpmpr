@@ -3,6 +3,9 @@
     "displayName": "Smart",
     "description": "Adds syntax highlighting for the Smart language",
     "version": "0.0.5",
+    "publisher": "smartin187",
+    "icon": "images/logo_smart.png",
+
     "main": "./out/extension.js",
     "repository": {
         "type": "git",
