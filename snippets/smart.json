@@ -98,5 +98,10 @@
         "prefix": "continue",
         "body": "continue;",
         "description": "Restart loop. Can't be used outside loop."
+    },
+    "f-string": {
+        "prefix": "F",
+        "body": "F\"${1}\"",
+        "description": "F-String. You can set `{}` on string for set a value."
     }
 }

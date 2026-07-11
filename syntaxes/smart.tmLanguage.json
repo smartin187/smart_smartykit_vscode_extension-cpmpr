@@ -176,13 +176,22 @@
             }]
         },
         "variables": {
-            "patterns": [{
-                "name": "meta.variable.smart",
-                "match": "\\.([\\p{L}_][\\p{L}0-9_]*)",
-                "captures": {
-                    "1": {"name": "variable.other.smart"}
+            "patterns": [
+                {
+                    "name": "meta.variable.smart",
+                    "match": "\\.([\\p{L}_][\\p{L}0-9_]*)",
+                    "captures": {
+                        "1": {"name": "variable.other.smart"}
+                    }
+                },
+                {
+                    "name": "meta.variable.advanced.smart",
+                    "match": "~([\\p{L}_][\\p{L}0-9_]*)",
+                    "captures": {
+                        "1": {"name": "variable.other.advanced.smart"}
+                    }
                 }
-            }]
+            ]
         },
         "keywords": {
             "patterns": [{
@@ -199,6 +208,41 @@
         "strings": {
             "patterns": [
                 {
+                    "name": "invalid.illegal.string.smart",
+                    "match": "(''|'([^'\\\\]|\\\\.){2,}'|'([^'\\\\]|\\\\.)*[a-z]([^'\\\\]|\\\\.)*'|'([^'\\\\]|\\\\.)*$|\"([^\"\\\\]|\\\\.){22,}\"|\"([^\"\\\\]|\\\\.)*[a-z]([^\"\\\\]|\\\\.)*\"|\"([^\"\\\\]|\\\\.)*$)"
+                },
+                {
+                    "name": "string.quoted.double.f.smart",
+                    "begin": "(F)(\")",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "1": {"name": "storage.modifier.smart"},
+                        "2": {"name": "punctuation.definition.string.begin.smart"}
+                    },
+                    "endCaptures": {
+                        "0": {"name": "punctuation.definition.string.end.smart"}
+                    },
+                    "patterns": [
+                        {"name": "constant.character.escape.smart", "match": "\\\\."},
+                        {
+                            "name": "meta.embedded.expression.smart",
+                            "begin": "\\{",
+                            "end": "\\}",
+                            "beginCaptures": {
+                                "0": {"name": "punctuation.definition.interpolation.begin.smart"}
+                            },
+                            "endCaptures": {
+                                "0": {"name": "punctuation.definition.interpolation.end.smart"}
+                            },
+                            "patterns": [
+                                {"include": "#variables"},
+                                {"include": "#functionCall"},
+                                {"include": "#numbers"}
+                            ]
+                        }
+                    ]
+                },
+                {
                     "name": "string.quoted.double.smart",
                     "begin": "\"",
                     "end": "(\"|\\n)",
@@ -209,12 +253,7 @@
                 },
                 {
                     "name": "string.quoted.single.smart",
-                    "begin": "'",
-                    "end": "('|\\n)",
-                    "endCaptures": {
-                        "1": {"name": "meta.string-close.smart"}
-                    },
-                    "patterns": [{"name": "constant.character.escape.smart", "match": "\\\\."}]
+                    "match": "'([^'a-z\\\\]|\\\\.)+'"
                 }
             ]
         },
