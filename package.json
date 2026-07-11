@@ -46,6 +46,10 @@
                 "extensions": [
                     ".sma"
                 ],
+                "icon": {
+                    "light": "./images/logo_smart.png",
+                    "dark": "./images/logo_smart.png"
+                },
                 "configuration": "./language-configuration.json"
             }
         ],
