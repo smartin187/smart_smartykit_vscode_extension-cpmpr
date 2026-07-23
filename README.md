@@ -1,5 +1,7 @@
 # smart-cpmpr README
 
+![smart-logo](images/logo_smart.png)
+
 This extension adds syntax highlighting for SmartyKit Smart programming.
 
 
