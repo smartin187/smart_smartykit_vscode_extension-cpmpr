@@ -6,8 +6,13 @@
     },
     "input": {
         "prefix": "input",
-        "body": "input: ",
+        "body": "input:;",
         "description": "Read a char from the keyboard"
+    },
+    "wozm": {
+        "prefix": "wozm",
+        "body": "wozm:;",
+        "description": "Exit the programm and return to Woz Monitor. Go to the adress FF1F: `GETLINE` routine."
     },
     "void function": {
         "prefix": "void",
@@ -26,12 +31,12 @@
     },
     "quit": {
         "prefix": "quit",
-        "body": "quit: ",
+        "body": "quit:;",
         "description": "Exit the program"
     },
     "asm_entry": {
         "prefix": "asm_entry",
-        "body": "asm_entry: ",
+        "body": "asm_entry: \"${2}\";",
         "description": "Add a code in assembly for MOS 6502."
     },
     "A": {

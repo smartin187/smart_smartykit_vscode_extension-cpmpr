@@ -202,7 +202,7 @@
         "builtins": {
             "patterns": [{
                 "name": "support.function.builtin.smart",
-                "match": "\\b(print|goto|quit|asm_entry|input)\\b"
+                "match": "\\b(print|goto|quit|asm_entry|input|wozm)\\b"
             }]
         },
         "strings": {
