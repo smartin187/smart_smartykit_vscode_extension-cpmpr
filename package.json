@@ -121,6 +121,12 @@
                     "description": "Path to a folder containing smart_emulator and/or smart_build (on Linux) or smart_emulator.exe and/or smart_build.exe (on Windows). Leave empty for auto-detection in the workspace."
                 }
             }
-        }
+        },
+        "semanticTokenTypes": [
+            {
+                "id": "anchor",
+                "description": "Smart anchor symbol"
+            }
+        ]
     }
 }
