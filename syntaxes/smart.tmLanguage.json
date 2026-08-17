@@ -206,17 +206,28 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue|error)\\b"
+                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue|error|for|in)\\b"
             }]
         },
         "builtins": {
             "patterns": [{
                 "name": "support.function.builtin.smart",
-                "match": "\\b(print|goto|quit|asm_entry|input|wozm)\\b"
+                "match": "\\b(print|goto|quit|asm_entry|input|wozm|restart)\\b"
             }]
         },
         "strings": {
             "patterns": [
+                {
+                    "name": "meta.import.smart",
+                    "match": "\\b(import|from)\\b\\s+\"[^\"]*\"(?:\\s+from\\s+\"[^\"]*\")?",
+                    "captures": {
+                        "1": { "name": "keyword.control.smart" },
+                        "2": { "name": "punctuation.definition.string.begin.smart" },
+                        "3": { "name": "string.quoted.double.smart" },
+                        "4": { "name": "punctuation.definition.string.end.smart" }
+                    }
+
+                },
                 {
                     "name": "invalid.illegal.string.smart",
                     "match": "(''|'([^'\\\\]|\\\\.){2,}'|'([^'\\\\]|\\\\.)*[a-z]([^'\\\\]|\\\\.)*'|'([^'\\\\]|\\\\.)*$|\"([^\"\\\\]|\\\\.){22,}\"|\"([^\"\\\\]|\\\\.)*[a-z]([^\"\\\\]|\\\\.)*\"|\"([^\"\\\\]|\\\\.)*$)"

@@ -39,6 +39,11 @@
         "body": "asm_entry: \"${2}\";",
         "description": "Add a code in assembly for MOS 6502."
     },
+    "restart": {
+        "prefix": "restart",
+        "body": "restart:;",
+        "description": "Restart the programme (go to the start adress)."
+    },
     "A": {
         "prefix": "A",
         "body": "A",
@@ -93,6 +98,11 @@
         "prefix": "while",
         "body": "while ${1}{;\n    ${2}\n}",
         "description": "while loop. If condition is false, the loop is exited."
+    },
+    "for": {
+        "prefix": "for",
+        "body": "for ${1} in |${2}|${3}|${4}| {;\n    ${5}\n}",
+        "description": "for loop. Iterate with start to end with step or iterate on an advenced value (`str` or `list`)."
     },
     "break": {
         "prefix": "break",
