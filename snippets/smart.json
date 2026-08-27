@@ -123,5 +123,30 @@
         "prefix": "F",
         "body": "F\"${1}\"",
         "description": "F-String. You can set `{}` on string for set a value."
+    },
+    "compiletime": {
+        "prefix": "compiletime",
+        "body": "compiletime ${1}",
+        "description": "compiletime keyword. Set after `debug`, `define`, `realloc`, `log`."
+    },
+    "compiletime-debug": {
+        "prefix": "compiletime debug",
+        "body": "compiletime debug ${1};",
+        "description": "compiletime debug keyword. Set after True, 1, False, 0 for active or remove debug mode."
+    },
+    "compiletime-define": {
+        "prefix": "compiletime define",
+        "body": "compiletime define ${1} to ${2};",
+        "description": "compiletime define keyword. Replace the name by the value at compile time."
+    },
+    "compiletime-realloc": {
+        "prefix": "compiletime realloc",
+        "body": "compiletime realloc ${1} to ${2};",
+        "description": "compiletime realloc keyword. Reallocate the adress of a variable to another variable."
+    },
+    "compiletime-log": {
+        "prefix": "compiletime log",
+        "body": "compiletime log \"${1}\";",
+        "description": "compiletime log keyword. Print a message on log of compiller."
     }
 }
