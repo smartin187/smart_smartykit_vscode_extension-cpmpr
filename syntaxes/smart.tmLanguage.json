@@ -206,7 +206,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue|error|compiletime\\s+define|compiletime\\s+realloc|compiletime\\s+log|compiletime\\s+debug|compiletime)\\b"
+                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue|error|compiletime\\s+define|compiletime\\s+realloc|compiletime\\s+log|compiletime\\s+debug|compiletime|for|in)\\b"
             }]
         },
         "builtins": {
