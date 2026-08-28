@@ -101,8 +101,13 @@
     },
     "for": {
         "prefix": "for",
-        "body": "for ${1} in |${2}|${3}|${4}| {;\n    ${5}\n}",
+        "body": "for ${1} in ${2} {;\n    ${5}\n}",
         "description": "for loop. Iterate with start to end with step or iterate on an advenced value (`str` or `list`)."
+    },
+    "for-step": {
+        "prefix": " in |",
+        "body": " in |${2}|${3}|${4}|",
+        "description": "The start, end and step of a for loop."
     },
     "break": {
         "prefix": "break",
