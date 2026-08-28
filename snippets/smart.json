@@ -153,5 +153,10 @@
         "prefix": "compiletime log",
         "body": "compiletime log \"${1}\";",
         "description": "compiletime log keyword. Print a message on log of compiller."
+    },
+    "shebang": {
+        "prefix": "!/usr/bin/smart_emulator",
+        "body": "#!/usr/bin/smart_emulator",
+        "description": "Run Smart file with shebang on Linux. Add --console for show output on terminal."
     }
 }
