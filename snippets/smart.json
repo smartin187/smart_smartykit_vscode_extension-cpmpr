@@ -158,5 +158,10 @@
         "prefix": "!/usr/bin/smart_emulator",
         "body": "#!/usr/bin/smart_emulator",
         "description": "Run Smart file with shebang on Linux. Add --console for show output on terminal."
+    },
+    "try-except": {
+        "prefix": "try",
+        "body": "try {;\n    ${1}\n}\nexcept {;\n    ${2}\n}",
+        "description": "Run the `try` block. If a runtime error occured, run the `except` block."
     }
 }
