@@ -163,5 +163,10 @@
         "prefix": "try",
         "body": "try {;\n    ${1}\n}\nexcept {;\n    ${2}\n}",
         "description": "Run the `try` block. If a runtime error occured, run the `except` block."
+    },
+    "thread": {
+        "prefix": "thread",
+        "body": "thread {;\n    ${1}\n}",
+        "description": "Open a second thread. Use with carfull on MOS6502."
     }
 }
