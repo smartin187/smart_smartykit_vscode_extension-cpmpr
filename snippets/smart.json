@@ -166,8 +166,13 @@
     },
     "thread": {
         "prefix": "thread",
-        "body": "thread {;\n    ${1}\n}",
+        "body": "thread ${1}",
         "description": "Open a second thread. Use with carfull on MOS6502."
+    },
+    "thread-nostack": {
+        "prefix": "thread nostack",
+        "body": "thread nostack {;\n    ${1}\n}",
+        "description": "Open a thread without stack. The thread can't call function."
     },
     "thread-stack": {
         "prefix": "thread stack",
