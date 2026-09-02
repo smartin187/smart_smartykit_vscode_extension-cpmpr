@@ -168,5 +168,11 @@
         "prefix": "thread",
         "body": "thread {;\n    ${1}\n}",
         "description": "Open a second thread. Use with carfull on MOS6502."
+    },
+    "thread-stack": {
+        "prefix": "thread stack",
+        "body": "thread stack {;\n    ${1}\n}",
+        "description": "Open a thread with shared stack."
     }
+
 }
