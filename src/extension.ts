@@ -53,14 +53,14 @@ export function activate(context: vscode.ExtensionContext) {
         const compilerPath =
             (compilerPathSetting && fs.existsSync(compilerPathSetting) ? compilerPathSetting : undefined) ??
             (defaultCompilerPath && fs.existsSync(defaultCompilerPath) ? defaultCompilerPath : undefined) ??
-            (await resolveToolchainScript(toolchainPath, 'smart_build.exe'));
+            (await resolveToolchainScript(toolchainPath, 'smart_compiler.exe'));
 
         if (!compilerPath) {
             let errorMessage: string;
             if (process.platform === 'linux') {
-                errorMessage = 'Unable to find smart_build. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_build), or ensure Smart-SmartyKit is installed.';
+                errorMessage = 'Unable to find smart_compiler. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_compiler), or ensure Smart-SmartyKit is installed.';
             } else {
-                errorMessage = 'Unable to find smart_build.exe. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_build.exe), or ensure Smart-SmartyKit is installed.';
+                errorMessage = 'Unable to find smart_compiler.exe. Configure smart.compilerPath (full path) or smart.toolchainPath (folder containing smart_compiler.exe), or ensure Smart-SmartyKit is installed.';
             }
             vscode.window.showErrorMessage(errorMessage);
             return;
@@ -118,7 +118,7 @@ function buildProcessCommand(executablePath: string, programPath: string): strin
 function getDefaultEmulatorPath(): string | undefined {
     if (process.platform === 'linux') {
         return '/usr/bin/smart_emulator';
-    } 
+    }
 
     else if (process.platform === 'win32') {
         const localAppData = process.env.LOCALAPPDATA;
@@ -134,9 +134,9 @@ function getDefaultEmulatorPath(): string | undefined {
 }
 
 function getDefaultCompilerPath(): string | undefined {
-    
+
     if (process.platform === 'linux') {
-        return '/usr/bin/smart_build'
+        return '/usr/bin/smart_compiler'
     }
 
     else if (process.platform === 'win32') {
@@ -145,7 +145,7 @@ function getDefaultCompilerPath(): string | undefined {
             return undefined;
         }
 
-        return path.join(localAppData, 'Smart-SmartyKit', 'smart_build.exe');
+        return path.join(localAppData, 'Smart-SmartyKit', 'smart_compiler.exe');
     }
 
     else {
