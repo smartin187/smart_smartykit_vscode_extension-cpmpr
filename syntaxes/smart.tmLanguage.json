@@ -132,7 +132,7 @@
         "functionDeclaration": {
             "patterns": [{
                 "name": "meta.function.smart",
-                "match": "\\b(void)\\s+([\\p{L}_][\\p{L}0-9_]*)\\s*\\{",
+                "match": "\\b(def)\\s+([\\p{L}_][\\p{L}0-9_]*)\\s*\\{",
                 "captures": {
                     "1": {"name": "keyword.control.smart"},
                     "2": {"name": "entity.name.function.smart"}
@@ -187,7 +187,7 @@
         "keywords": {
             "patterns": [{
                 "name": "keyword.control.smart",
-                "match": "\\b(void|return|import|from|if|else|elif|while|break|continue|error|compiletime\\s+define|compiletime\\s+realloc|compiletime\\s+log|compiletime\\s+debug|compiletime|for|in|try|except|thread\\s+nostack|thread\\s+stack|thread)\\b"
+                "match": "\\b(def|return|import|from|if|else|elif|while|break|continue|error|compiletime\\s+define|compiletime\\s+realloc|compiletime\\s+log|compiletime\\s+debug|compiletime|for|in|try|except|thread\\s+nostack|thread\\s+stack|thread)\\b"
             }]
         },
         "builtins": {

@@ -14,9 +14,9 @@
         "body": "wozm:;",
         "description": "Exit the programm and return to Woz Monitor. Go to the adress FF1F: `GETLINE` routine."
     },
-    "void function": {
-        "prefix": "void",
-        "body": "void ${1:new_function}{;\n    ${2}\n}",
+    "def function": {
+        "prefix": "def",
+        "body": "def ${1:new_function}{;\n    ${2}\n}",
         "description": "Make new function"
     },
     "return function": {

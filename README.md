@@ -7,7 +7,7 @@ This extension adds syntax highlighting for SmartyKit Smart programming.
 
 ## Features
 
-Add a coloration for comment, char, str, function (void), label, and variable.
+Add a coloration for comment, char, str, function (def), label, and variable.
 
 Also provides 2 commands to work with Smart-SmartyKit:
 
